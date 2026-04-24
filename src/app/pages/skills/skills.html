@@ -1,0 +1,42 @@
+<!-- src/app/pages/skills/skills.html -->
+<section class="skills-container" id="skills">
+  <!-- Header -->
+  <div class="skills-header">
+    <h2>My Skills</h2>
+    <div class="underline"></div>
+    <p>
+      ✨ Technical expertise blended with creativity — explore my core
+      competencies below.
+    </p>
+  </div>
+
+  <!-- Floating Orbs Area -->
+  <div #stage class="skills-stage">
+    <div
+      class="skill-circle"
+      *ngFor="let s of SKILLS; let i = index"
+      [style.animationDelay.ms]="i * 80"
+    >
+      <img [src]="s.logo" [alt]="s.name" />
+      <span>{{ s.name }}</span>
+    </div>
+  </div>
+
+  <!-- Skills Text Table -->
+  <div class="skills-table">
+    <div class="skills-row" *ngFor="let row of ROWS; let rowIndex = index">
+      <div
+        class="skill-box"
+        *ngFor="let col of row; let colIndex = index"
+        [style.animationDelay.ms]="(rowIndex + colIndex) * 100"
+      >
+        <h3>{{ col.title }}</h3>
+        <ul>
+          <li *ngFor="let item of col.items">
+            {{ item }}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

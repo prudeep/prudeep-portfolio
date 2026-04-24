@@ -1,0 +1,27 @@
+<nav class="nav">
+  <div class="brand">
+    <div class="logo">KP</div>
+
+    <div class="brand-text">
+      <h1>Kuppam Prudeep</h1>
+      <!-- <div class="subtitle"> • JAVA • WEB Developer</div> -->
+    </div>
+  </div>
+
+  <div class="nav-links">
+    <a
+      *ngFor="let link of links"
+      [routerLink]="link.to"
+      routerLinkActive
+      #rla="routerLinkActive"
+      [routerLinkActiveOptions]="{ exact: isExact(link) }"
+      class="nav-link"
+      [ngClass]="{ 'active-link': rla.isActive, 'inactive-link': !rla.isActive }"
+    >
+      <div class="nav-link-inner">
+        <span class="label">{{ link.label }}</span>
+        <span class="underline" *ngIf="rla.isActive"></span>
+      </div>
+    </a>
+  </div>
+</nav>

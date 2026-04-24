@@ -1,0 +1,35 @@
+<section class="contact">
+  <h1 class="title">Let’s Connect & Collaborate 🤝</h1>
+
+  <p class="subtitle">
+    Whether it’s a new project, a collaboration, or just to say hi —
+    I’d love to hear from you!
+  </p>
+
+  <div class="quick-links">
+    <a
+      *ngFor="let item of quickLinks"
+      [href]="item.link"
+      [attr.target]="item.isExternal ? '_blank' : null"
+      rel="noopener noreferrer"
+    >
+      <img [src]="item.img" [alt]="item.title" />
+    </a>
+  </div>
+
+  <div class="contact-highlight">
+    <h2>💡 Open to Opportunities</h2>
+    <p>
+      I’m actively looking for roles, internships, and collaborative projects
+      in <strong> Java, Angular and Web Development</strong>.
+    </p>
+  </div>
+
+  <div class="contact-illustration">
+  <img
+    src="assets/developer.png"
+    alt="Developer sitting on chair working on computer"
+  />
+</div>
+
+</section>

@@ -1,0 +1,74 @@
+<section class="certs-container">
+  <div class="certs-card">
+    <h2 class="certs-title">Certificates 🏅</h2>
+    <p class="certs-subtitle">
+      Explore my certifications — technical &amp; others.
+    </p>
+
+    <!-- Tabs -->
+    <div class="tabs">
+      <button
+        *ngFor="let t of tabs"
+        class="tab-btn"
+        [ngClass]="{ active: activeTab === t.id }"
+        (click)="setTab(t.id)"
+      >
+        {{ t.label }}
+      </button>
+    </div>
+
+    <!-- Certificates grid -->
+    <div class="certs-grid">
+      <div
+        class="cert-card"
+        *ngFor="let c of certificates[activeTab]; trackBy: trackByTitle"
+      >
+        <img
+          class="cert-image"
+          [src]="c.img"
+          [alt]="c.title"
+        />
+
+        <strong class="cert-title">{{ c.title }}</strong>
+
+        <div class="cert-meta">
+          {{ c.org }}<span *ngIf="c.date"> • {{ c.date }}</span>
+        </div>
+
+        <div class="cert-actions">
+          <button
+            class="view-btn"
+            (click)="openCert(c)"
+          >
+            View
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal preview -->
+  <div
+    class="modal-backdrop"
+    *ngIf="selectedCert"
+    (click)="closeModal()"
+  >
+    <div
+      class="modal-inner"
+      (click)="$event.stopPropagation()"
+    >
+      <img
+        class="modal-image"
+        [src]="selectedCert?.img"
+        [alt]="selectedCert?.title || 'Certificate preview'"
+      />
+      <button
+        class="modal-close"
+        (click)="closeModal()"
+        type="button"
+      >
+        ✕
+      </button>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,53 @@
+<section class="home">
+  <!-- Top: photo + info -->
+  <div class="home-top">
+    <!-- Left: animated photo -->
+    <div class="photo-wrapper">
+      <div class="photo-ring"></div>
+
+      <div class="photo-circle">
+        <img [src]="photo" alt="Kuppam Prudeep" />
+      </div>
+    </div>
+
+    <!-- Right: text info -->
+    <div class="info">
+      <h1 class="headline">
+        Hi, I’m
+        <span class="name-gradient">Kuppam Prudeep</span>
+      </h1>
+
+      <!-- Typing line -->
+      <p class="typing-effect">
+        Former Software Developer Intern @ UNext | Java  &amp;  Angular | CSE (Cyber Security) Graduate
+      </p>
+
+      <!-- profession tags -->
+      <div class="tags">
+        <div class="tag" *ngFor="let role of professions">
+          {{ role }}
+        </div>
+      </div>
+
+      <!-- info cards -->
+      <div class="info-cards">
+        <div class="info-card" *ngFor="let card of infoCards">
+          <strong>{{ card.label }}</strong>
+          <p>{{ card.value }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom: connect links -->
+  <div class="connect">
+    <h2>Connect</h2>
+
+    <div class="connect-icons">
+      <a *ngFor="let item of quickLinks" [href]="item.link" [title]="item.title" target="_blank"
+        rel="noopener noreferrer" class="connect-link">
+        <img [src]="item.img" [alt]="item.title" />
+      </a>
+    </div>
+  </div>
+</section>

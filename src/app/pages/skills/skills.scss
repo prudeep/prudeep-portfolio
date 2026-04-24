@@ -1,0 +1,162 @@
+/* Container (optional general padding/alignment) */
+.skills-container {
+  padding: 3rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* ---------- Header: smaller, left-aligned, no big gaps ---------- */
+.skills-header {
+  text-align: left;
+  margin: 10px 0 12px 4%;
+  padding: 0;
+  max-width: calc(100% - 8%);
+}
+
+.skills-header h2 {
+  font-size: 1.25rem;
+  color: #00ffe0;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.05;
+}
+
+.underline {
+  width: 60px;
+  height: 2px;
+  background: #00ffe0;
+  margin: 6px 0 8px 0;
+}
+
+/* subtitle */
+.skills-header p {
+  color: #b0b0b0;
+  font-size: 0.95rem;
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------- Orb area: narrower margins and reduced height ---------- */
+.skills-stage {
+  position: relative;
+  width: 94%;
+  max-width: 1200px;
+  height: 360px;
+  margin: 20px auto;
+  border-radius: 14px;
+  background: radial-gradient(circle at 50% 50%, #080808, #0f0f0f);
+  box-shadow: inset 0 0 40px rgba(0, 255, 255, 0.08);
+  overflow: hidden;
+}
+
+/* Shrink the orbs themselves (logo + text) */
+.skill-circle {
+  position: absolute;
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 255, 255, 0.04);
+  border: 1px solid rgba(0, 255, 255, 0.18);
+  backdrop-filter: blur(6px);
+  cursor: pointer;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, background 0.22s ease;
+}
+
+.skill-circle img {
+  width: 28px;
+  height: 28px;
+  margin-bottom: 2px;
+  filter: drop-shadow(0 0 6px rgba(0, 255, 255, 0.36)) brightness(1.1);
+}
+
+.skill-circle span {
+  font-size: 10px;
+  color: rgba(180, 255, 255, 0.9);
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+}
+
+/* simple hover highlight (we can do this via CSS instead of framer-motion) */
+.skill-circle:hover {
+  transform: scale(1.25);
+  box-shadow: 0 0 35px 10px rgba(0, 255, 255, 0.6);
+  background: rgba(0, 255, 255, 0.12);
+}
+
+.skill-circle:hover img {
+  filter: drop-shadow(0 0 12px rgba(0, 255, 255, 0.9)) brightness(1.6);
+}
+
+/* ---------- Skills text blocks ---------- */
+.skills-table {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.skills-row {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.skill-box {
+  background: linear-gradient(145deg, #080808 0%, #0f0f0f 100%);
+  border: 1px solid rgba(0, 255, 255, 0.12);
+  border-radius: 12px;
+  padding: 18px 22px;
+  width: 300px;
+  text-align: left;
+  color: #d1d5db;
+  animation: fade-up 0.6s ease-out both;
+}
+
+.skill-box h3 {
+  margin: 0 0 8px;
+  font-size: 1.1rem;
+  color: #00ffe0;
+}
+
+.skill-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skill-box li {
+  margin: 4px 0;
+  font-size: 0.95rem;
+  transition: transform 0.15s ease, color 0.15s ease;
+}
+
+.skill-box li:hover {
+  transform: translateX(6px);
+  color: #00ffc8;
+}
+
+/* simple fade-up animation for boxes */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* responsive tweaks */
+@media (max-width: 768px) {
+  .skills-stage {
+    height: 320px;
+  }
+}

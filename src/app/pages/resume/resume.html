@@ -1,0 +1,186 @@
+<!-- src/app/pages/resume/resume.html -->
+<section class="resume-container">
+    <div class="resume-card">
+        <!-- Title -->
+        <h2 class="resume-title">📄 Resume</h2>
+        <p class="resume-subtitle">A quick glance at my journey.</p>
+
+        <!-- Profile header -->
+        <div class="resume-profile">
+            <div class="profile-left">
+                <h3 class="profile-name">👨‍💻 KUPPAM PRUDEEP</h3>
+                <p class="profile-line">
+                    B.Tech – Computer Science &amp; Engineering (Cyber Security)
+                </p>
+                <p class="profile-line">📍 Tirupati, Andhra Pradesh, India</p>
+                <p class="profile-line">
+                    ✉️ kprudeep@gmail.com &nbsp;|&nbsp; 📞 +91-7093596974
+                </p>
+            </div>
+
+            <div class="profile-summary">
+                <strong class="summary-title">Professional Summary:</strong>
+                <p class="summary-text">
+                    Highly motivated Software Developer with a strong foundation in Java
+                    and Angular, experienced in building responsive web applications and
+                    working in collaborative, agile teams. Passionate about creating
+                    efficient, maintainable and high-quality software solutions and eager
+                    to apply my skills to impactful real-world projects.
+                </p>
+            </div>
+        </div>
+
+        <!-- Experience / Internships -->
+        <div class="resume-section">
+            <h4 class="section-title">💼 Internship Experience</h4>
+            <ul class="section-list">
+                <li>
+                    <strong>Software Developer Intern</strong> — UNext Learning Private
+                    Limited (In-office) &nbsp; <span class="muted">Apr 2025 – Oct 2025</span><br />
+                    <span class="muted">
+                        • Built responsive, interactive front-end interfaces using Angular,
+                        HTML, SCSS and TypeScript.<br />
+                        • Collaborated with UI/UX and dev teams to deliver user-centric
+                        features and fix bugs.<br />
+                        • Contributed to Lumen and Student Lifecycle Management modules,
+                        improving usability and performance.
+                    </span>
+                </li>
+
+                <li>
+                    <strong>Web Development Intern</strong> — CodTech with AICTE
+                    &nbsp;<span class="muted">Jun 2024 – Aug 2024</span><br />
+                    <span class="muted">
+                        • Developed and tested multiple web app tasks, enhancing
+                        functionality and performance.<br />
+                        • Debugged and resolved software issues, improving application
+                        stability.<br />
+                        • Helped document code and development processes to support team
+                        collaboration.
+                    </span>
+                </li>
+
+                <li>
+                    <strong>Java Intern</strong> — Yhills
+                    &nbsp;<span class="muted">Aug 2023 – Sep 2023</span><br />
+                    <span class="muted">
+                        • Worked on Java-based applications, feature development and code
+                        reviews.<br />
+                        • Participated in sprint planning and troubleshooting, improving
+                        both code quality and project management skills.
+                    </span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Academic project -->
+        <div class="resume-section">
+            <h4 class="section-title">🧪 Academic Project</h4>
+            <ul class="section-list">
+                <li>
+                    <strong>
+                        Enhanced Cloud Security using Post-Quantum Encryption Techniques
+                    </strong>
+                    <br />
+                    <span class="muted">
+                        • Objective: Improve cloud data security using post-quantum
+                        encryption to resist quantum computing threats.<br />
+                        • Algorithms: AES (Advanced Encryption Standard), ABE
+                        (Attribute-Based Encryption).<br />
+                        • Role: Designed and implemented the IPCC7 algorithm, including
+                        encryption and decryption, and optimized it for performance and
+                        security.
+                    </span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Portfolio / other projects -->
+        <div class="resume-section">
+            <h4 class="section-title">📂 Projects</h4>
+            <ul class="section-list">
+                <li>
+                    <strong>
+                        Low Level Design of an Elevator System using OOPs in Java
+                    </strong>
+                    <br />
+                    <span class="muted">
+                        • Simulated an elevator moving between floors with configurable
+                        timing and user controls.<br />
+                        • Demonstrated object-oriented design principles such as classes,
+                        interfaces and state handling.
+                    </span>
+                </li>
+
+                <li>
+                    <strong>Furry Friends – Pet Sitting Web Application</strong><br />
+                    <span class="muted">
+                        • Full-stack web app connecting pet owners and sitters using
+                        HTML5, CSS3, JavaScript and PHP.<br />
+                        • Implemented booking and scheduling features for managing
+                        availability and appointments.
+                    </span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Skills chips -->
+        <div class="resume-section">
+            <h4 class="section-title">⚙️ Skills</h4>
+            <div class="skills-chips">
+                <span class="skill-chip" *ngFor="let skill of skillChips">
+                    {{ skill }}
+                </span>
+            </div>
+        </div>
+
+        <!-- Education -->
+        <div class="resume-section">
+            <h4 class="section-title">🎓 Education</h4>
+            <ul class="section-list">
+                <li>
+                    <strong>
+                        B.Tech – Computer Science and Engineering (Cyber Security)
+                    </strong>
+                    — Sree Vidyanikethan Engineering College, Tirupati<br />
+                    <span class="muted">2022 – 2025 &nbsp;|&nbsp; CGPA: 8.52</span>
+                </li>
+                <li>
+                    <strong>Diploma – Computer Engineering</strong> — Sri Venkatesa
+                    Perumal College of Engineering and Technology, Puttur<br />
+                    <span class="muted">2019 – 2022 &nbsp;|&nbsp; Percentage: 83.54</span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Certifications -->
+        <div class="resume-section">
+            <h4 class="section-title">📜 Certifications &amp; Achievements</h4>
+            <ul class="section-list">
+                <li>Programming in Java – NPTEL</li>
+                <li>Programming in Java – Yhills</li>
+                <li>Web Development – CodTech IT Solutions</li>
+                <li>Bootcamp on C Programming – Codegnan</li>
+                <li>
+                    Participated in 2nd International Conference on Data Analytics, Smart Computing and Networks - IDASCN 2024   
+                </li>
+            </ul>
+        </div>
+
+        <!-- Links (no LeetCode, only GitHub + LinkedIn) -->
+        <div class="resume-links">
+            <a *ngFor="let site of links" class="resume-link" [href]="site.link" target="_blank" rel="noreferrer">
+                {{ site.name }}
+            </a>
+        </div>
+
+        <div class="resume-pdf">
+            <iframe src="assets/Prudeep_Resume.pdf" title="Kuppam Prudeep Resume"></iframe>
+        </div>
+
+        <a class="download-btn" href="assets/Prudeep_Resume.pdf" download="Kuppam_Prudeep_Resume.pdf">
+            ⬇️ Download Resume
+        </a>
+
+    </div>
+</section>
